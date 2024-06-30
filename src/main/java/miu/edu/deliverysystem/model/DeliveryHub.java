@@ -11,7 +11,7 @@ public class DeliveryHub {
     private int id;
     @Column(unique = true, nullable = false)
     @NotBlank(message = "hubName can not be blank")
-    private String hubName;
+    private String name;
     @NotBlank(message="contactPhone cannot be blank")
     private String contactPhone;
     @OneToOne(cascade = CascadeType.PERSIST)
