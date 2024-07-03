@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import miu.edu.deliverysystem.model.DeliveryStatus;
 
 import java.time.LocalDate;
 
@@ -13,6 +14,6 @@ import java.time.LocalDate;
 @Builder
 public class DeliverySummaryDto {
     private LocalDate deliveryDate;
-    private DeleveryStatus status;
+    private DeliveryStatus status;
     private String driver;
 }
