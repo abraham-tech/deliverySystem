@@ -17,7 +17,7 @@ public class AppConfig {
                     @Override
                     protected void configure() {
                         map().setEmail(source.getEmail());
-                        map().setContactNumber(source.getContactNumber());
+                        map().setPhone(source.getPhone());
                     }
                 }
         );
