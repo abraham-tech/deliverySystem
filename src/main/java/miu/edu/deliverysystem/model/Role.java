@@ -2,8 +2,6 @@ package miu.edu.deliverysystem.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,12 +24,4 @@ public enum Role {
     );
     private final Set<Permission> permissions;
 
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        var authorities = new ArrayList<GrantedAuthority>();
-        for (var permission : permissions) {
-            authorities.add(new SimpleGrantedAuthority(permission.getPermission()));
-        }
-        authorities.add(new SimpleGrantedAuthority("ROLE_" + name()));
-        return authorities;
-    }
 }
